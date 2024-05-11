@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
-import db from "../config/Database";
-import Users from "./UserModel";
+import db from "../config/Database.js";
+import Users from "./UserModel.js";
 
 const {DataTypes} = Sequelize;
 
@@ -41,7 +41,7 @@ const Products = db.define('product', {
 
 
 //Specifying the relations between User and product
-Users.hasMany(Products);
+Users.hasMany(Products); 
 Products.belongsTo(Users, {foreignKey: 'userId'});
 
 export default Products;
