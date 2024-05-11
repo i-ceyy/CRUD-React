@@ -10,7 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
-          Edit <code>src/App.js</code> and save to reloaddwqdqwdqwdqw.
+          Edit <code>src/App.js</code> and save to reloaddwqdqwdqwdweafefeawfqw.
         </p>
         <span>
           <span>Learn </span>
