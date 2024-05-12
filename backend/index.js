@@ -6,6 +6,7 @@ import dotenv from "dotenv"; //loads environtment variable from .env into proces
 //import db from "./config/Database.js"; //used the very first  time to create tables on db
 import UserRoute from "./routes/UserRoute.js";
 import ProductRoute from "./routes/ProductRoute.js";
+import AuthRoute from "./routes/AuthRoute.js";
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.use(cors({
 app.use(express.json()); //enabling us to recieved data in json form
 app.use(UserRoute);
 app.use(ProductRoute);
+app.use(AuthRoute);
 
 app.listen(process.env.APP_PORT, () => {
     console.log('Server up and running ...');

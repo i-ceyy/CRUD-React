@@ -3,11 +3,11 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "prima",
-    "email": "prima@gmail.com",
+    "name": "ariprima",
+    "email": "ariprima@gmail.com",
     "password": "1234",
     "confPassword": "1234",
-    "role": "user"
+    "role": "admin"
 }
 
 ###
@@ -20,7 +20,7 @@ GET http://localhost:5000/users/43b70f9e-f878-4bb4-adea-56c85173ec6b
 
 ###
 //update user
-PATCH  http://localhost:5000/users/71693ea5-7bf0-4f0e-b892-b8849cff425a
+PATCH  http://localhost:5000/users/6a6005f1-a8d7-4e66-865d-d988fd0c2b3c
 Content-Type: application/json
 
 {
@@ -33,4 +33,14 @@ Content-Type: application/json
 
 ###
 //delete user
-PATCH  http://localhost:5000/users/71693ea5-7bf0-4f0e-b892-b8849cff425a
+DELETE http://localhost:5000/users/f9039eba-96c4-4dba-bde3-4ea305f1920d
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{    
+    "email": "ariprima@gmail.com",
+    "password": "1234"
+}
