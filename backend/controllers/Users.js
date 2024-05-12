@@ -46,10 +46,58 @@ export const createUser = async(req, res) =>{
     }
 }
 
-export const updateUser = (req, res) =>{
-    
+export const updateUser = async(req, res) =>{
+    const user = await Users.findOne({
+        where: {
+            uuid: req.params.id
+        }
+    });
+    if(!user) return res.status(404).json({msg: "Users isnt found ..."});
+    const {name, email, password, confPassword, role} = req.body;
+
+    let hashPasword;
+    if(password === "" || password === null){
+        hashPasword = user.password;
+    }else{
+        hashPasword = await argon2.hash(password);
+    }
+
+    if(password != confPassword) return res.status(400).json({msg: "Password Mismatch"});
+
+    try {
+        await Users.update({
+            name : name,
+            email: email,
+            password: hashPasword,
+            role: role
+        },{
+            where:{
+                id: user.id
+            }
+        });
+        res.status(200).json({msg: "User updated successfully"});
+    } catch (error) {
+        res.status(400).json({msg: error.message});
+    }
 }
 
-export const deleteUser = (req, res) =>{
-    
+export const deleteUser = async(req, res) =>{
+    const user = await Users.findOne({
+        where: {
+            uuid: req.params.id
+        }
+    });
+
+    if(!user) return res.status(404).json({msg: "User isnt found ..."});
+
+    try {
+        await Users.destroy({
+            where: {
+                id: user.id
+            }
+        });
+        res.status(200).json({msg: "User deleted ..."});
+    } catch (error) {
+        res.status(400).json({msg: error.message});
+    }
 }

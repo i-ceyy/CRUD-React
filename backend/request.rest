@@ -3,9 +3,34 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "ari",
-    "email": "ari@gmail.com",
+    "name": "prima",
+    "email": "prima@gmail.com",
     "password": "1234",
     "confPassword": "1234",
-    "role": "admin"
+    "role": "user"
 }
+
+###
+//get all users
+GET http://localhost:5000/users
+
+###
+//get single user
+GET http://localhost:5000/users/43b70f9e-f878-4bb4-adea-56c85173ec6b
+
+###
+//update user
+PATCH  http://localhost:5000/users/71693ea5-7bf0-4f0e-b892-b8849cff425a
+Content-Type: application/json
+
+{
+    "name": "prima updated",
+    "email": "prima@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//delete user
+PATCH  http://localhost:5000/users/71693ea5-7bf0-4f0e-b892-b8849cff425a
