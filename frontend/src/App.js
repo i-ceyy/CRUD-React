@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 function App() {
@@ -14,10 +15,13 @@ function App() {
 =======
 =======
 >>>>>>> parent of a2a3684 (Preparing for the frontend)
+=======
+>>>>>>> parent of a2a3684 (Preparing for the frontend)
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 function App() {
@@ -80,6 +84,11 @@ function App() {
 
 function App() {
   return (
+=======
+
+function App() {
+  return (
+>>>>>>> parent of a2a3684 (Preparing for the frontend)
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -126,6 +135,9 @@ function App() {
           </a>
         </span>
       </header>
+<<<<<<< HEAD
+>>>>>>> parent of a2a3684 (Preparing for the frontend)
+=======
 >>>>>>> parent of a2a3684 (Preparing for the frontend)
     </div>
   );
