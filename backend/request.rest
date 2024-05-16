@@ -41,7 +41,7 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {    
-    "email": "ariprima@gmail.com",
+    "email": "prima@gmail.com",
     "password": "1234"
 }
 
@@ -57,31 +57,12 @@ DELETE http://localhost:5000/logout
 //get all products
 GET http://localhost:5000/products
 
-
-###
-//get single product
-GET http://localhost:5000/products/54c7949b-4687-4a0b-b545-221c58dfd31d
-
 ###
 //create a product
 POST http://localhost:5000/products
 Content-Type: application/json
 
 {    
-    "name": "admin produk 8",
+    "name": "produk 4",
     "price": 1234
 }
-
-###
-//update a product
-PATCH http://localhost:5000/products/54c7949b-4687-4a0b-b545-221c58dfd31d
-Content-Type: application/json
-
-{    
-    "name": "produk 1 updated by admin",
-    "price": 1234
-}
-
-###
-//delete a product
-DELETE http://localhost:5000/products/6cabaa6c-1143-4cc0-94e5-3f42f8b6b8bd
