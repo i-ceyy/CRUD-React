@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from './Layout';
+import Welcom from '../components/Welcom';
 
 const Dashboard = () => {
   return (
     <Layout>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, deserunt!
+        <Welcom/>
     </Layout>
   )
 }
