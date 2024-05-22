@@ -7,14 +7,14 @@ const Users = db.define('users', {
     uuid:{
         type: DataTypes.STRING,
         defaultValue: DataTypes.UUIDV4,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true
         }
     },
     name:{
         type: DataTypes.STRING,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true,
             len: [3, 100] // min is 3 and max is 100 characters
@@ -22,7 +22,7 @@ const Users = db.define('users', {
     },
     email:{
         type: DataTypes.STRING,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true,
             isEmail: true
@@ -30,14 +30,14 @@ const Users = db.define('users', {
     },
     password:{
         type: DataTypes.STRING,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true,
         }
     },
     role:{
         type: DataTypes.STRING,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true,
         }

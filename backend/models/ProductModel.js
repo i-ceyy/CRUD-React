@@ -8,14 +8,14 @@ const Products = db.define('product', {
     uuid:{
         type: DataTypes.STRING,
         defaultValue: DataTypes.UUIDV4,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true
         }
     },
     name:{
         type: DataTypes.STRING,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true,
             len: [3, 100] // min is 3 and max is 100 characters
@@ -23,14 +23,14 @@ const Products = db.define('product', {
     },    
     price:{
         type: DataTypes.INTEGER,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true,
         }
     },
     userId:{
         type: DataTypes.INTEGER,
-        allowNullL: false,
+        allowNull: false,
         validate:{
             notEmpty: true,
         }
